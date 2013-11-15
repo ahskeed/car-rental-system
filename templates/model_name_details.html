@@ -1,0 +1,51 @@
+{% include 'roadtrip.tmpl' %}
+
+<ul style="list-style-type: none">
+    <li>
+        NAME: {{ model_name.name }}
+    </li>
+    <li>
+        SEAT CAPACITY: {{ model_name.seat_capacity }}
+    </li>
+    <li>
+        FUEL CAPACITY: {{ mmodel_name.fuel_capacity }} litres
+    </li>
+    <li>
+        ENGINE CAPACITY: {{ model_name.eng_capacity }} cc
+    </li>
+    <li>
+        FUEL TYPE: {{ model_name.fuel_type }}
+    </li>
+</ul>
+<br>
+<b>DIMENSIONS</b>
+<br>
+<ul style="list-style-type: none">
+    <li>
+        HEIGHT: {{ model_name.height }} mm
+    </li>
+    <li>
+        WIDTH: {{ model_name.width }} mm
+    </li>
+    <li>
+        LENGTH: {{ model_name.length }} mm
+    </li>
+
+</ul>
+
+<br>
+<b>PRICE DETAILS</b>
+<br>
+<ul style="list-style-type: none">
+    <li>
+        PRICE PER DAY: Rs. {{ price }}
+    </li>
+    <li>
+        ADDITIONAL PRICE FOR AC PER DAY: Rs. {{ ac_add }}
+    </li>
+    <li>
+        INITIAL DEPOSIT: Rs. {{ deposit }}
+    </li>
+
+</ul>
+

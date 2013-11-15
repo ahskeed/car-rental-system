@@ -1,0 +1,22 @@
+{% include 'roadtrip.tmpl' %}
+{% if premium_list %}
+<ul>
+{% for car_premium in premium_list %}
+    <li>
+    {% if car_premium == "MERCEDES E CLASS" %}
+        <a href="/rent/model/merc_eclass" ><img src="/static/merc_eclass.jpg" height="150 px" width="250 px"></a>
+    {% elif car_premium == "MERCEDES S CLASS" %}
+        <a href="/rent/model/merc_sclass" ><img src="/static/merc_sclass.jpg" height="150 px" width="250 px"></a>
+    {% elif car_premium == "BMW 5 SERIES" %}
+        <a href="/rent/model/bmw_5" ><img src="/static/bmw_5.jpg" height="150 px" width="250 px"></a>
+    {% elif car_premium == "BMW 7 SERIES" %}
+        <a href="/rent/model/bmw_7" ><img src="/static/bmw_7.jpg" height="150 px" width="250 px"></a>
+    {% endif %} 
+    <br>
+    {{ car_premium }}
+    <br>
+    <br>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}

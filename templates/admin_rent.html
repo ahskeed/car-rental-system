@@ -1,0 +1,83 @@
+{% include 'roadtrip.tmpl' %}
+
+Transaction number: <input type="text" name="Trans_no" id="Trans_no"><br>
+<button type="button" id="get_details">Ok!</button>
+
+<div id="trans_details">
+    <div class="row-fluid">
+    <div class="span2">
+        UID                 :
+    </div>
+    <div class="span7" id="uid"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        NAME                :
+    </div>
+    <div class="span7" id="name"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        ADDRESS             :
+    </div>
+    <div class="span7" id="address"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        LICENSE REG NUMBER  :
+    </div>
+    <div class="span7" id="license_reg_no"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        CAR TYPE NUMBER     :
+    </div>
+    <div class="span7" id="car_type_no"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        DRIVER NUMBER       :
+    </div>
+    <div class="span7" id="driver_no"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        TIME OF RENT        :
+    </div>
+    <div class="span7" id="time_of_rent">
+    <input type="text" id="datepicker" />
+    </div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        ADVANCE             :
+    </div>
+    <div class="span7" id="advance"></div>
+    </div>
+    <div class="row-fluid">
+    <div class="span2">
+        NO. OF DAYS         :
+    </div>
+    <div class="span7" id="no_of_days"></div>
+    </div>
+</div>
+
+<script>
+    $("#get_details").click(function(){
+        var url = '/admin/get_trans_details/' + $("#Trans_no").val();
+        $.get(url, function(data){
+            $('#uid').append(data.uid);
+            $('#name').append(data.name);
+            $('#address').append(data.address);
+            $('#license_reg_no').append(data.license_reg_no);
+            $('#car_type_no').append(data.car_type_no);
+            $('#driver_no').append(data.driver_no);
+            $('#time_of_rent').append(data.time_of_rent);
+            $('#advance').append(data.advance);
+            $('#no_of_days').append(data.no_of_days);
+
+        },'json');
+
+    });
+</script>
+

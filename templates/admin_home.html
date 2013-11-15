@@ -1,0 +1,10 @@
+{% include 'roadtrip.tmpl' %}
+
+<button type="button" id="rent">Rent a car</button>
+<button type="button" id="return">Return car</button>
+
+<script>
+    $( "#rent" ).click(function() {
+        window.location = "http://127.0.0.1:8000/admin/transaction_details";
+    });
+</script>

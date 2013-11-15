@@ -1,0 +1,20 @@
+{% include 'roadtrip.tmpl' %}
+{% if premium_list %}
+<ul>
+{% for car_premium in premium_list %}
+    <li>
+    {% if car_premium == "HONDA CITY" %}
+        <a href="/rent/model/honda_city" ><img src="/static/honda_city.jpg" height="150 px" width="250 px"></a>
+    {% elif car_premium == "HONDA VERNA" %}
+        <a href="/rent/model/hyundai_verna" ><img src="/static/hyundai_verna.jpg" height="150 px" width="250 px"></a>
+    {% elif car_premium == "MITSUBISHI LANCER" %}
+        <a href="/rent/model/mitsubishi_lancer" ><img src="/static/mit_lancer.jpg" height="150 px" width="250 px"></a>
+    {% endif %} 
+    <br>
+    {{ car_premium }}
+    <br>
+    <br>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}
