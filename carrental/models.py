@@ -57,6 +57,7 @@ class Driver(models.Model):
     place_no = models.ForeignKey('Place', db_column='place_no')
     tot_hours = models.BigIntegerField(blank=True, null=True)
     salary = models.BigIntegerField(blank=True, null=True)
+    avail = models.IntegerField(default=1)
 
     class Meta:
         managed = True
@@ -90,16 +91,17 @@ class Place(models.Model):
 
 
 class RentalTransaction(models.Model):
-    trans_no = models.BigIntegerField(primary_key=True)
+    trans_no = models.AutoField(primary_key=True)
     u_id = models.ForeignKey(Customer, db_column='u_id')
-    license_reg_no = models.CharField(max_length=10)
+    license_reg_no = models.ForeignKey(Car, db_column='license_reg_no')
     car_type_no = models.ForeignKey(CarType, db_column='car_type_no')
     driver_no = models.ForeignKey(Driver, db_column='driver_no', blank=True, null=True)
-    time_rent = models.DateTimeField()
+    time_rent = models.DateTimeField(blank=True, null=True)
     time_return = models.DateTimeField(blank=True, null=True)
     distance = models.BigIntegerField(default=0, blank=True, null=True)
     advance = models.BigIntegerField(blank=True, null=True)
     rental_amt = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
+    no_of_days = models.IntegerField()
 
     class Meta:
         managed = True

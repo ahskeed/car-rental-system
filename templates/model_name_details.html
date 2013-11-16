@@ -124,7 +124,7 @@
 <script>
     $(function(){
         {% if not availability %}
-            $('#continue').attr('disabled',true);
+            $('#continue').hide();
             $('#not_available').show();
             $('#not_available').append('There are no cars available in this model right now.')
         {% else %}
