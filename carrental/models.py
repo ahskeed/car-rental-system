@@ -3,7 +3,7 @@ from django.db import models
 
 class PhoneNum(models.Model):
     u_id = models.BigIntegerField()
-    ph_no = models.IntegerField()
+    ph_no = models.BigIntegerField()
 
     class Meta:
         managed = True
