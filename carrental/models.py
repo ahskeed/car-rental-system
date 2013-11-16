@@ -4,6 +4,7 @@ from django.db import models
 class PhoneNum(models.Model):
     u_id = models.BigIntegerField()
     ph_no = models.IntegerField()
+
     class Meta:
         managed = True
         db_table = 'phone_num'
@@ -17,6 +18,7 @@ class Car(models.Model):
     color = models.CharField(max_length=10, blank=True)
     ac = models.IntegerField(blank=True, null=True)
     at_service = models.IntegerField(blank=True, null=True)
+
     class Meta:
         managed = True
         db_table = 'car'
@@ -29,6 +31,7 @@ class CarType(models.Model):
     deposit = models.DecimalField(max_digits=7, decimal_places=2)
     ac_add = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
     driver_per_km = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True)
+
     class Meta:
         managed = True
         db_table = 'car_type'
@@ -40,6 +43,7 @@ class Customer(models.Model):
     lname = models.CharField(max_length=20, blank=True)
     address = models.CharField(max_length=100)
     lic_no = models.CharField(max_length=10)
+
     class Meta:
         managed = True
         db_table = 'customer'
@@ -53,6 +57,7 @@ class Driver(models.Model):
     place_no = models.ForeignKey('Place', db_column='place_no')
     tot_hours = models.BigIntegerField(blank=True, null=True)
     salary = models.BigIntegerField(blank=True, null=True)
+
     class Meta:
         managed = True
         db_table = 'driver'
@@ -65,10 +70,11 @@ class Model(models.Model):
     fuel_capacity = models.BigIntegerField(blank=True, null=True)
     eng_capacity = models.BigIntegerField(blank=True, null=True)
     fuel_type = models.CharField(max_length=2)
-    height = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
-    width = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
-    length = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True)
+    height = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    width = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    length = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
     car_type_no = models.ForeignKey(CarType, db_column='car_type_no')
+
     class Meta:
         managed = True
         db_table = 'model'
@@ -77,6 +83,7 @@ class Model(models.Model):
 class Place(models.Model):
     place_no = models.BigIntegerField(primary_key=True)
     place_name = models.CharField(max_length=20)
+
     class Meta:
         managed = True
         db_table = 'place'
@@ -93,6 +100,7 @@ class RentalTransaction(models.Model):
     distance = models.BigIntegerField(default=0, blank=True, null=True)
     advance = models.BigIntegerField(blank=True, null=True)
     rental_amt = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
+
     class Meta:
         managed = True
         db_table = 'rental_transaction'

@@ -4,27 +4,28 @@
     <list default="true" id="3109ab0d-ea94-498f-abc3-c479485c3790" name="Default" comment="" />
     <ignored path="Car_Rental.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/settings.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384520672200" ignored="false" />
+    <file path="/settings.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384543280170" ignored="false" />
     <file path="/models.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384246861066" ignored="false" />
     <file path="/*.regexp" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384408670461" ignored="false" />
     <file path="/home.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384242200085" ignored="false" />
     <file path="/home.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384249609154" ignored="false" />
-    <file path="/urls.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384539263380" ignored="false" />
-    <file path="/views.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384539791595" ignored="false" />
+    <file path="/urls.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384583297004" ignored="false" />
+    <file path="/views.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384594963134" ignored="false" />
     <file path="/Dummy.txt" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384520447726" ignored="false" />
-    <file path="/view_car_types.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384529806303" ignored="false" />
-    <file path="/view_top_premium.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384530816759" ignored="false" />
+    <file path="/view_car_types.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544346970" ignored="false" />
+    <file path="/view_top_premium.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544700766" ignored="false" />
     <file path="/merc_eclass_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384257760757" ignored="false" />
     <file path="/view_luxury.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384532128089" ignored="false" />
     <file path="/view_medium.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384532596459" ignored="false" />
-    <file path="/view_budget.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384532966140" ignored="false" />
-    <file path="/view_suv.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384533421771" ignored="false" />
+    <file path="/view_budget.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544924541" ignored="false" />
+    <file path="/view_suv.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384545155876" ignored="false" />
     <file path="/admin_home.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384366426393" ignored="false" />
     <file path="/roadtrip.tmpl" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384413969410" ignored="false" />
     <file path="/admin.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384403819721" ignored="false" />
-    <file path="/admin_rent.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384412604131" ignored="false" />
+    <file path="/admin_rent.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384554353437" ignored="false" />
     <file path="/jquery-ui.js" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384413714095" ignored="false" />
-    <file path="/model_name_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384538807577" ignored="false" />
+    <file path="/model_name_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384589964778" ignored="false" />
+    <file path="/customer_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384595186050" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +45,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carrental/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="4" selection-start="3738" selection-end="3738" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carrental/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="21" selection-start="1664" selection-end="1676" vertical-scroll-proportion="0.0">
+            <state line="131" column="22" selection-start="3979" selection-end="3979" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customer_details.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="97" selection-start="2488" selection-end="2488" vertical-scroll-proportion="-0.5985401">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#form#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +85,14 @@
       <file leaf-file-name="model_name_details.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="646" selection-end="646" vertical-scroll-proportion="-5.2916665">
-              <folding />
+            <state line="132" column="7" selection-start="3424" selection-end="3424" vertical-scroll-proportion="-11.333333">
+              <folding>
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#button#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,34 +100,16 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Car_Rental/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+            <state line="10" column="52" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_car_types.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/view_car_types.html">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Car_Rental/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="9" selection-start="879" selection-end="879" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_top_premium.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/view_top_premium.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="769" selection-end="769" vertical-scroll-proportion="0.42293233">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="merc_eclass_details.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/merc_eclass_details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="61" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+            <state line="14" column="74" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,22 +133,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/carrental/models.py" />
-        <option value="$PROJECT_DIR$/carrental/static/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/carrental/admin.py" />
         <option value="$PROJECT_DIR$/carrental/static/js/jquery-ui.js" />
         <option value="$PROJECT_DIR$/templates/roadtrip.tmpl" />
-        <option value="$PROJECT_DIR$/templates/admin_rent.html" />
         <option value="$PROJECT_DIR$/Car_Rental/settings.py" />
         <option value="$PROJECT_DIR$/templates/view_car_types.html" />
-        <option value="$PROJECT_DIR$/templates/view_top_premium.html" />
+        <option value="$PROJECT_DIR$/templates/view_budget.html" />
         <option value="$PROJECT_DIR$/templates/view_luxury.html" />
         <option value="$PROJECT_DIR$/templates/view_medium.html" />
-        <option value="$PROJECT_DIR$/templates/view_budget.html" />
         <option value="$PROJECT_DIR$/templates/view_suv.html" />
-        <option value="$PROJECT_DIR$/templates/model_name_details.html" />
+        <option value="$PROJECT_DIR$/templates/view_top_premium.html" />
+        <option value="$PROJECT_DIR$/templates/admin_rent.html" />
+        <option value="$PROJECT_DIR$/carrental/models.py" />
         <option value="$PROJECT_DIR$/Car_Rental/urls.py" />
+        <option value="$PROJECT_DIR$/templates/model_name_details.html" />
         <option value="$PROJECT_DIR$/carrental/views.py" />
+        <option value="$PROJECT_DIR$/templates/customer_details.html" />
       </list>
     </option>
   </component>
@@ -167,7 +184,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,25 +258,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="carrental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carrental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Car_Rental" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/Bilent/bilentapp" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -317,29 +382,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Car_Rental" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="true" />
-      <option name="customRunCommand" value="python manage.py runserver" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,6 +403,29 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Car_Rental" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="true" />
+      <option name="customRunCommand" value="python manage.py runserver" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -461,11 +526,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2866242" sideWeight="0.6851852" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29219747" sideWeight="0.80325204" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.014634146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31464174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19674797" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -537,107 +602,119 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Car_Rental/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/view_medium.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="507" selection-end="507" vertical-scroll-proportion="0.12075472">
+        <state line="17" column="11" selection-start="838" selection-end="838" vertical-scroll-proportion="0.5769231" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/view_car_types.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="28" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.9024896" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrental/static/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="895" column="2" selection-start="12197" selection-end="12199" vertical-scroll-proportion="0.3326087">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/view_suv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="1075" selection-end="1100" vertical-scroll-proportion="-4.9166665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/view_top_premium.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="25" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.36651585" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin_rent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2229" selection-end="2229" vertical-scroll-proportion="-51.875">
+        <state line="3" column="27" selection-start="132" selection-end="132" vertical-scroll-proportion="0.093361" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Car_Rental/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="74" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="0" selection-end="30" vertical-scroll-proportion="-0.0">
+        <state line="7" column="8" selection-start="191" selection-end="259" vertical-scroll-proportion="0.21784233" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/view_medium.html">
+    <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/merchant/order/order_place.mako">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="77" selection-start="546" selection-end="546" vertical-scroll-proportion="-6.25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/view_budget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="637" selection-end="637" vertical-scroll-proportion="-8.75">
+        <state line="17" column="12" selection-start="552" selection-end="552" vertical-scroll-proportion="-3.7726398">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carrental/models.py">
+    <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/merchant/order/customer_in_order.mako">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="720" selection-end="720" vertical-scroll-proportion="-2.497191">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carrental/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/view_suv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="8" selection-start="811" selection-end="811" vertical-scroll-proportion="-10.625" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/view_luxury.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="74" selection-start="549" selection-end="549" vertical-scroll-proportion="0.4225352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carrental/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.762533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/merc_eclass_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="61" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Car_Rental/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+        <state line="10" column="52" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrental/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="4" selection-start="3738" selection-end="3738" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="646" selection-end="646" vertical-scroll-proportion="-5.2916665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/view_car_types.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="879" selection-end="879" vertical-scroll-proportion="-12.5">
-          <folding />
+        <state line="132" column="7" selection-start="3424" selection-end="3424" vertical-scroll-proportion="-11.333333">
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#button#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/carrental/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="21" selection-start="1664" selection-end="1676" vertical-scroll-proportion="0.0">
+        <state line="131" column="22" selection-start="3979" selection-end="3979" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/view_top_premium.html">
+    <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="769" selection-end="769" vertical-scroll-proportion="0.42293233">
-          <folding />
+        <state line="61" column="97" selection-start="2488" selection-end="2488" vertical-scroll-proportion="-0.5985401">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#form#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

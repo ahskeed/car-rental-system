@@ -1,20 +1,18 @@
 {% include 'roadtrip.tmpl' %}
 {% if premium_list %}
-<ul>
+<div class="row-fluid">
 {% for car_premium in premium_list %}
-    <li>
-    {% if car_premium == "HONDA ACCORD" %}
-        <a href="/rent/model/honda_accord" ><img src="/static/honda_accord.jpg" height="150 px" width="250 px"></a>
-    {% elif car_premium == "TOYOTA COROLLA" %}
-        <a href="/rent/model/toyota_corolla" ><img src="/static/toyota_corolla.jpg" height="150 px" width="250 px"></a>
-    {% elif car_premium == "TOYOTA CAMRY" %}
-        <a href="/rent/model/toyota_camry" ><img src="/static/toyota_camry.jpg" height="150 px" width="250 px"></a>
-    {% endif %} 
-    <br>
-    {{ car_premium }}
-    <br>
-    <br>
-    </li>
+        <div class="span4" style="padding: 30px">
+            <p><b><ins>{{ car_premium }}</ins></b></p>
+            <br>
+            {% if car_premium == "HONDA ACCORD" %}
+                <a href="/rent/model/honda_accord" ><img src="/static/honda_accord.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "TOYOTA COROLLA" %}
+                <a href="/rent/model/toyota_corolla" ><img src="/static/toyota_corolla.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "TOYOTA CAMRY" %}
+                <a href="/rent/model/toyota_camry" ><img src="/static/toyota_camry.jpg" height="150 px" width="250 px"></a>
+            {% endif %}
+        </div>
 {% endfor %}
-</ul>
+</div>
 {% endif %}

@@ -1,51 +1,135 @@
 {% include 'roadtrip.tmpl' %}
 
-<ul style="list-style-type: none">
-    <li>
-        NAME: {{ model_name.name }}
-    </li>
-    <li>
-        SEAT CAPACITY: {{ model_name.seat_capacity }}
-    </li>
-    <li>
-        FUEL CAPACITY: {{ mmodel_name.fuel_capacity }} litres
-    </li>
-    <li>
-        ENGINE CAPACITY: {{ model_name.eng_capacity }} cc
-    </li>
-    <li>
-        FUEL TYPE: {{ model_name.fuel_type }}
-    </li>
-</ul>
-<br>
-<b>DIMENSIONS</b>
-<br>
-<ul style="list-style-type: none">
-    <li>
-        HEIGHT: {{ model_name.height }} mm
-    </li>
-    <li>
-        WIDTH: {{ model_name.width }} mm
-    </li>
-    <li>
-        LENGTH: {{ model_name.length }} mm
-    </li>
+<div class="row-fluid span4">
+    <h3><ins>General Details</ins></h3>
+    <br>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>NAME: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.name }}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>SEAT CAPACITY: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.seat_capacity }}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>FUEL CAPACITY: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.fuel_capacity }} litres
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>ENGINE CAPACITY: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.eng_capacity }} cc
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>FUEL TYPE: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.fuel_type }}
+        </div>
+    </div>
+</div>
+<div class="row-fluid span12">
+    <div class="span5">
+        <hr style="color: darkgray">
+    </div>
+</div>
+<div class="row-fluid span4">
+    <h3><ins>Dimensions</ins></h3>
+    <br>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>HEIGHT: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.height }} mm
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>WIDTH: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.width }} mm
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>LENGTH: </b></p>
+        </div>
+        <div class="span7">
+            {{ model.length }} mm
+        </div>
+    </div>
+</div>
+<div class="row-fluid span12">
+    <div class="span5">
+        <hr style="color: darkgray">
+    </div>
+</div>
+<div class="row-fluid span4">
+    <h3><ins>Price Details</ins></h3>
+    <br>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>PRICE PER DAY: </b></p>
+        </div>
+        <div class="span7">
+            Rs. {{ price }}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>AC ADDITIONAL PER DAY: </b></p>
+        </div>
+        <div class="span7">
+            Rs. {{ ac_add }}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <p><b>INITIAL DEPOSIT: </b></p>
+        </div>
+        <div class="span7">
+            Rs. {{ deposit }}
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div style="padding-left: 200px; padding-top: 50px; padding-bottom: 10px">
+        <button id="continue" type="button" class="btn btn-info"><a href="{{ model_name }}" style="color: #000000">Continue</a></button>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span5" style="padding-left: 100px">
+        <p class="alert" id="not_available"></p>
+    </div>
+</div>
 
-</ul>
-
-<br>
-<b>PRICE DETAILS</b>
-<br>
-<ul style="list-style-type: none">
-    <li>
-        PRICE PER DAY: Rs. {{ price }}
-    </li>
-    <li>
-        ADDITIONAL PRICE FOR AC PER DAY: Rs. {{ ac_add }}
-    </li>
-    <li>
-        INITIAL DEPOSIT: Rs. {{ deposit }}
-    </li>
-
-</ul>
+<script>
+    $(function(){
+        {% if not availability %}
+            $('#continue').attr('disabled',true);
+            $('#not_available').show();
+            $('#not_available').append('There are no cars available in this model right now.')
+        {% else %}
+            $('#not_available').hide();
+        {% endif %}
+    });
+</script>
 

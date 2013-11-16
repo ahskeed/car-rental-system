@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'carrental.views.home', name='home'),
     url(r'^rent$', 'carrental.views.view_car_types'),
+    url(r'^rent/customer_details/(?P<model_name>\w+)$', 'carrental.views.customer_details'),
     url(r'^rent/model/(?P<model_name>\w+)$', 'carrental.views.model_name_details'),
     url(r'^rent/(?P<car_type>\w+)$', 'carrental.views.view_car_type_details'),
 

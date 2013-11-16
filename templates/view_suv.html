@@ -1,22 +1,42 @@
 {% include 'roadtrip.tmpl' %}
 {% if premium_list %}
-<ul>
+<div class="row-fluid">
 {% for car_premium in premium_list %}
-    <li>
-    {% if car_premium == "TOYOTA LAND CRUISER" %}
-        <a href="/rent/model/toyota_cruiser" ><img src="/static/toyota_cruiser.jpg" height="150 px" width="250 px"></a>
-    {% elif car_premium == "TATA MOTORS SAFARI" %}
-        <a href="/rent/model/tata_safari" ><img src="/static/tata_safari.jpg" height="150 px" width="250 px"></a>
-    {% elif car_premium == "TOYOTA QUALIS" %}
-        <a href="/rent/model/toyota_qualis" ><img src="/static/toyota_qualis.jpg" height="150 px" width="250 px"></a>
-    {% elif car_premium == "INNOVA" %}
-        <a href="/rent/model/innova" ><img src="/static/innova.jpg" height="150 px" width="250 px"></a>
-    {% endif %} 
-    <br>
-    {{ car_premium }}
-    <br>
-    <br>
-    </li>
+    {% if forloop.counter <= 2 %}
+        <div class="span4" style="padding: 30px">
+            <p><b><ins>{{ car_premium }}</ins></b></p>
+            <br>
+            {% if car_premium == "TOYOTA LAND CRUISER" %}
+                <a href="/rent/model/toyota_cruiser" ><img src="/static/toyota_cruiser.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "TATA MOTORS SAFARI" %}
+                <a href="/rent/model/tata_safari" ><img src="/static/tata_safari.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "TOYOTA QUALIS" %}
+                <a href="/rent/model/toyota_qualis" ><img src="/static/toyota_qualis.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "INNOVA" %}
+                <a href="/rent/model/innova" ><img src="/static/innova.jpg" height="150 px" width="250 px"></a>
+            {% endif %}
+        </div>
+    {% endif %}
 {% endfor %}
-</ul>
+</div>
+<div class="row-fluid">
+<div class="span4"></div>
+{% for car_premium in premium_list %}
+    {% if forloop.counter > 2 %}
+        <div class="span4" style="padding: 30px">
+            <p><b><ins>{{ car_premium }}</ins></b></p>
+            <br>
+            {% if car_premium == "TOYOTA LAND CRUISER" %}
+                <a href="/rent/model/toyota_cruiser" ><img src="/static/toyota_cruiser.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "TATA MOTORS SAFARI" %}
+                <a href="/rent/model/tata_safari" ><img src="/static/tata_safari.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "TOYOTA QUALIS" %}
+                <a href="/rent/model/toyota_qualis" ><img src="/static/toyota_qualis.jpg" height="150 px" width="250 px"></a>
+            {% elif car_premium == "INNOVA" %}
+                <a href="/rent/model/innova" ><img src="/static/innova.jpg" height="150 px" width="250 px"></a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
 {% endif %}

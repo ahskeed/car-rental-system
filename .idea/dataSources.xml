@@ -6,8 +6,8 @@
       <identifier-quote-string>`</identifier-quote-string>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql:///carrental</jdbc-url>
-      <user-name>divya</user-name>
-      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+      <user-name>deeksha</user-name>
+      <user-password>dfcedfcfdfcfdfc1dfd9dfc2dfcbdfdadfd9dfd9dfdddfce</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.PyCharm20/config/jdbc-drivers/mysql-connector-license.txt</url>

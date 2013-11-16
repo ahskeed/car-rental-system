@@ -54,59 +54,90 @@ def view_car_type_details(request, car_type):
 
 
 def model_name_details(request, model_name):
-    cursor = connection.cursor()
     if model_name == 'merc_eclass':
-        model_name = 'MERCEDES E CLASS'
+        name = 'MERCEDES E CLASS'
     elif model_name == 'merc_sclass':
-        model_name = 'MERCEDES S CLASS'
+        name = 'MERCEDES S CLASS'
     elif model_name == 'bmw_5':
-        model_name = 'BMW 5 SERIES'
+        name = 'BMW 5 SERIES'
     elif model_name == 'bmw_7':
-        model_name = 'BMW 7 SERIES'
+        name = 'BMW 7 SERIES'
 
     elif model_name == 'honda_accord':
-        model_name = 'HONDA ACCORD'
+        name = 'HONDA ACCORD'
     elif model_name == 'toyota_camry':
-        model_name = 'TOYOTA CAMRY'
+        name = 'TOYOTA CAMRY'
     elif model_name == 'toyota_corolla':
-        model_name = 'TOYOTA COROLLA'
+        name = 'TOYOTA COROLLA'
 
     elif model_name == 'honda_city':
-        model_name = 'HONDA CITY'
+        name = 'HONDA CITY'
     elif model_name == 'hyundai_verna':
-        model_name = 'HYUNDAI VERNA'
+        name = 'HYUNDAI VERNA'
     elif model_name == 'mit_lancer':
-        model_name = 'MITSUBISHI LANCER'
+        name = 'MITSUBISHI LANCER'
 
     elif model_name == 'ambassador':
-        model_name = 'AMBASSADOR'
+        name = 'AMBASSADOR'
     elif model_name == 'tata_indigo':
-        model_name = 'TATA INDIGO'
+        name = 'TATA INDIGO'
     elif model_name == 'hyundai_accent':
-        model_name = 'HYUNDAI ACCENT'
+        name = 'HYUNDAI ACCENT'
 
     elif model_name == 'toyota_cruiser':
-        model_name = 'TOYOTA LAND CRUISER'
+        name = 'TOYOTA LAND CRUISER'
     elif model_name == 'tata_safari':
-        model_name = 'TATA MOTORS SAFARI'
+        name = 'TATA MOTORS SAFARI'
     elif model_name == 'toyota_qualis':
-        model_name = 'TOYOTA QUALIS'
+        name = 'TOYOTA QUALIS'
     elif model_name == 'innova':
-        model_name = 'INNOVA'
+        name = 'INNOVA'
 
-    query = "select * from model where name = '" + model_name + "'"
-    print query
+    query = "select * from model where name = '" + name + "'"
     row = Model.objects.raw(query)
     model_list = list(row)
+    query = "select model_no from car where model_no = " + str(model_list[0].model_no)
+    cursor = connection.cursor()
+    cursor.execute(query)
+    row = cursor.fetchall()
+    if len(list(row)):
+        availability = True
+    else:
+        availability = False
 
     context = RequestContext(request, {
-        'model_name': model_list[0],
+        'model_name': "/rent/customer_details/"+model_name,
+        'model': model_list[0],
         'price': model_list[0].car_type_no.min_price,
         'ac_add': model_list[0].car_type_no.ac_add,
-        'deposit': model_list[0].car_type_no.deposit
+        'deposit': model_list[0].car_type_no.deposit,
+        'availability': availability
     })
     cursor.close()
     return render(request, 'model_name_details.html', context)
+
+
+def customer_details(request, model_name):
+    cursor = connection.cursor()
+    query = "select place_name from place"
+    cursor.execute(query)
+    row = cursor.fetchall()
+    row = map(list, row)
+    place_list = []
+    for x in row:
+        for y in x:
+            place_list.append(y)
+    context = RequestContext(request, {
+        'place_list': place_list,
+        'driver': True
+    })
+    if not request.POST:
+        return render(request, 'customer_details.html', context)
+    else:
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        address = request.POST.get('address')
+        return render(request, 'customer_details.html')
 
 
 

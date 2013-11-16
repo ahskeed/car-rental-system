@@ -1,24 +1,45 @@
 {% include 'roadtrip.tmpl' %}
 {% if car_type_list %}
-<ul>
+<div class="row-fluid">
 {% for car_type in car_type_list %}
-    <li>
-    {% if car_type == "TOP PREMIUM" %}
-        <a href="/rent/top_premium" ><img src="/static/top_premium.jpg" height="150 px" width="250 px"></a>
-    {% elif car_type == "LUXURY AND EXECUTIVE" %}
-        <a href="/rent/luxury" ><img src="/static/luxury.jpg" height="150 px" width="250 px"></a>
-    {% elif car_type == "MEDIUM" %}
-        <a href="/rent/medium" ><img src="/static/medium.jpg" height="150 px" width="250 px"></a>
-    {% elif car_type == "BUDGET AND ECONOMY" %}
-        <a href="/rent/budget" ><img src="/static/budget.jpg" height="150 px" width="250 px"></a>
-    {% elif car_type == "SUV/MUV" %}
-        <a href="/rent/suv" ><img src="/static/suv.jpg" height="150 px" width="250 px"></a>
-    {% endif %} 
-    <br>
-    {{ car_type }}
-    <br>
-    <br>
-    </li>
+    <div class="span4" style="padding-left: 30px">
+        {% if forloop.counter <= 3 %}
+        <p><b><ins>{{ car_type }}</ins></b></p>
+        <br>
+        {% if car_type == "TOP PREMIUM" %}
+            <a href="/rent/top_premium" ><img src="/static/top_premium.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "LUXURY AND EXECUTIVE" %}
+            <a href="/rent/luxury" ><img src="/static/luxury.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "MEDIUM" %}
+            <a href="/rent/medium" ><img src="/static/medium.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "BUDGET AND ECONOMY" %}
+            <a href="/rent/budget" ><img src="/static/budget.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "SUV/MUV" %}
+            <a href="/rent/suv" ><img src="/static/suv.jpg" height="150 px" width="250 px"></a>
+        {% endif %}
+    {% endif %}
+    </div>
 {% endfor %}
-</ul>
+</div>
+<div class="row-fluid">
+{% for car_type in car_type_list %}
+    <div class="span4" style="padding-bottom: 30px">
+        {% if forloop.counter > 3 %}
+        <p><b><ins>{{ car_type }}</ins></b></p>
+        <br>
+        {% if car_type == "TOP PREMIUM" %}
+            <a href="/rent/top_premium" ><img src="/static/top_premium.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "LUXURY AND EXECUTIVE" %}
+            <a href="/rent/luxury" ><img src="/static/luxury.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "MEDIUM" %}
+            <a href="/rent/medium" ><img src="/static/medium.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "BUDGET AND ECONOMY" %}
+            <a href="/rent/budget" ><img src="/static/budget.jpg" height="150 px" width="250 px"></a>
+        {% elif car_type == "SUV/MUV" %}
+            <a href="/rent/suv" ><img src="/static/suv.jpg" height="150 px" width="250 px"></a>
+        {% endif %}
+    {% endif %}
+    </div>
+{% endfor %}
+</div>
 {% endif %}
