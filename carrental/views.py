@@ -171,6 +171,7 @@ def customer_details(request, model_name):
     context = RequestContext(request, {
         'place_list': place_list
     })
+
     if not request.POST:
         return render(request, 'customer_details.html', context)
     else:
@@ -221,6 +222,7 @@ def customer_details(request, model_name):
                 'primary_phone': primary_phone,
                 'license_no': license_no,
                 'driver': driver,
+                'place': place,
                 'ac': ac,
                 'no_of_days': no_of_days,
                 'error': error,
@@ -233,6 +235,23 @@ def customer_details(request, model_name):
             query = "select driver_no from driver natural join place where avail = 1 and place_name = '" + place + "'"
             cursor.execute(query)
             row = cursor.fetchone()
+            if not row:
+                context = RequestContext(request, {
+                    'place_list': place_list,
+                    'fname': fname,
+                    'lname': lname,
+                    'uid': uid,
+                    'address': address,
+                    'primary_phone': primary_phone,
+                    'license_no': license_no,
+                    'driver': driver,
+                    'place': place,
+                    'ac': ac,
+                    'no_of_days': no_of_days,
+                    'error': True,
+                    'error_msg': "There are no drivers available for this place."
+                })
+                return render(request, 'customer_details.html', context)
             driver_no = list(row)
 
         query = "select * from model where name = '" + name + "'"
@@ -264,6 +283,7 @@ def customer_details(request, model_name):
                 'primary_phone': primary_phone,
                 'license_no': license_no,
                 'driver': driver,
+                'place': place,
                 'ac': ac,
                 'no_of_days': no_of_days,
                 'error': True,
@@ -271,18 +291,21 @@ def customer_details(request, model_name):
             })
             return render(request, 'customer_details.html', context)
         try:
-            query = "insert into customer values (" + uid + ",'" + fname + "','" + lname + "','" + address + "','" + license_no + "')"
             cursor = connection.cursor()
+            query = "select * from customer where u_id = " + uid
             cursor.execute(query)
+            if not cursor.fetchone():
+                query = "insert into customer values (" + uid + ",'" + fname + "','" + lname + "','" + address + "','" + license_no + "')"
 
-            query = "insert into phone_num(u_id,ph_no) values (" + uid + "," + primary_phone + ")"
-            cursor.execute(query)
-            if alt_phone:
-                query = "insert into phone_num(u_id,ph_no) values (" + uid + "," + alt_phone + ")"
                 cursor.execute(query)
 
+                query = "insert into phone_num(u_id,ph_no) values (" + uid + "," + primary_phone + ")"
+                cursor.execute(query)
+                if alt_phone:
+                    query = "insert into phone_num(u_id,ph_no) values (" + uid + "," + alt_phone + ")"
+                    cursor.execute(query)
+
             query = "update car set cust_uid = " + uid + " where license_reg_no = '" + lic_no + "'"
-            print query
             cursor.execute(query)
 
             if driver_no:
@@ -321,9 +344,6 @@ def customer_details(request, model_name):
             trans.save()
             transaction.commit_unless_managed()
             trans_no = trans.trans_no
-            
-            print lic_no
-            print trans_no
 
             context = RequestContext(request, {
                 'success': True,

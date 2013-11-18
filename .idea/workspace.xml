@@ -10,7 +10,7 @@
     <file path="/home.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384242200085" ignored="false" />
     <file path="/home.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384249609154" ignored="false" />
     <file path="/urls.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384583297004" ignored="false" />
-    <file path="/views.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384617352358" ignored="false" />
+    <file path="/views.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384765726243" ignored="false" />
     <file path="/Dummy.txt" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384520447726" ignored="false" />
     <file path="/view_car_types.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544346970" ignored="false" />
     <file path="/view_top_premium.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544700766" ignored="false" />
@@ -25,7 +25,7 @@
     <file path="/admin_rent.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384554353437" ignored="false" />
     <file path="/jquery-ui.js" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384413714095" ignored="false" />
     <file path="/model_name_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384612257762" ignored="false" />
-    <file path="/customer_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384611978864" ignored="false" />
+    <file path="/customer_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384765680184" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/carrental/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="330" column="41" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.40515652">
+            <state line="307" column="99" selection-start="10962" selection-end="10962" vertical-scroll-proportion="0.3902439">
               <folding>
                 <element signature="e#26#69#0" expanded="true" />
               </folding>
@@ -68,7 +68,7 @@
       <file leaf-file-name="customer_details.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="33" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
+            <state line="147" column="56" selection-start="5686" selection-end="5686" vertical-scroll-proportion="-10.416667">
               <folding />
             </state>
           </provider>
@@ -77,7 +77,7 @@
       <file leaf-file-name="model_name_details.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.0">
+            <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-21.583334">
               <folding />
             </state>
           </provider>
@@ -132,8 +132,8 @@
         <option value="$PROJECT_DIR$/templates/admin_rent.html" />
         <option value="$PROJECT_DIR$/Car_Rental/urls.py" />
         <option value="$PROJECT_DIR$/templates/model_name_details.html" />
-        <option value="$PROJECT_DIR$/templates/customer_details.html" />
         <option value="$PROJECT_DIR$/carrental/models.py" />
+        <option value="$PROJECT_DIR$/templates/customer_details.html" />
         <option value="$PROJECT_DIR$/carrental/views.py" />
       </list>
     </option>
@@ -506,17 +506,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="24" width="1310" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2977707" sideWeight="0.9512195" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19267516" sideWeight="0.7398374" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.014634146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.048780486" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2601626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -652,20 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="33" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/carrental/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="90" column="0" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.0">
@@ -673,9 +659,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-21.583334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="56" selection-start="5686" selection-end="5686" vertical-scroll-proportion="-10.416667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/carrental/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="330" column="41" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.40515652">
+        <state line="307" column="99" selection-start="10962" selection-end="10962" vertical-scroll-proportion="0.3902439">
           <folding>
             <element signature="e#26#69#0" expanded="true" />
           </folding>

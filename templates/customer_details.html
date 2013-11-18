@@ -49,10 +49,10 @@
     <br>
     <div class="row-fluid" style="padding-left: 30px">
         <div class="span3" style="padding-left: 20px">
-            <h4>Total Amount:</h4>
+            <h3>Total Amount:</h3>
         </div>
         <div class="span3">
-            <p>{{ advance }}</p>
+            <h4>{{ advance }}</h4>
         </div>
     </div>
 {% endif %}
@@ -141,8 +141,13 @@
             </div>
             <div class="span3">
                 <select id="place" name="place">
-                    {% for place in place_list %}
-                        <option value="{{ place }}">{{ place }}</option>
+                    {% for p in place_list %}
+                        {% ifequal place p %}
+                            <option value="{{ p }}" selected>{{ p }}</option>
+                        {% else %}
+                            <option value="{{ p }}">{{ p }}</option>
+                        {% endifequal %}
+
                     {% endfor %}
                 </select>
             </div>
@@ -160,9 +165,8 @@
 
 <script>
     $(function(){
-        if ($(this).is(":checked"))
+        if ($('#driver').is(":checked"))
         {
-            alert("is checked");
             $('#place').show();
         }
         else
