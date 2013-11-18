@@ -57,7 +57,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/carrental/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="330" column="41" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.94152045">
+            <state line="330" column="41" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.40515652">
               <folding>
                 <element signature="e#26#69#0" expanded="true" />
               </folding>
@@ -68,41 +68,8 @@
       <file leaf-file-name="customer_details.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="33" selection-start="1626" selection-end="1626" vertical-scroll-proportion="-12.083333">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#2;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#4;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#5;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#7;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#form#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="51" column="33" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,14 +77,8 @@
       <file leaf-file-name="model_name_details.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-10.916667">
-              <folding>
-                <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#button#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#!!top" expanded="true" />
-              </folding>
+            <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -343,14 +304,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Bilent/bilentapp" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Bilent/bilentapp" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -407,29 +368,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Car_Rental" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -451,6 +389,29 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="true" />
       <option name="customRunCommand" value="python manage.py runserver" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Car_Rental" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -545,13 +506,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="24" width="1310" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29219747" sideWeight="0.9512195" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2977707" sideWeight="0.9512195" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.014634146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -639,9 +600,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/carrental/static/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="895" column="2" selection-start="12197" selection-end="12199" vertical-scroll-proportion="0.3326087">
-          <folding />
-        </state>
+        <state line="895" column="2" selection-start="12197" selection-end="12199" vertical-scroll-proportion="0.3326087" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/view_suv.html">
@@ -666,23 +625,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/merchant/order/order_place.mako">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="552" selection-end="552" vertical-scroll-proportion="-3.7726398">
-          <folding />
-        </state>
+        <state line="17" column="12" selection-start="552" selection-end="552" vertical-scroll-proportion="-3.7726398" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/merchant/order/customer_in_order.mako">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Car_Rental/urls.py">
@@ -701,54 +654,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-10.916667">
-          <folding>
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#button#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#!!top" expanded="true" />
-          </folding>
+        <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="33" selection-start="1626" selection-end="1626" vertical-scroll-proportion="-12.083333">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#6;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#2;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#4;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#5;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#p#0;n#div#0;n#div#7;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#8;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#form#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="51" column="33" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +675,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/carrental/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="330" column="41" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.94152045">
+        <state line="330" column="41" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.40515652">
           <folding>
             <element signature="e#26#69#0" expanded="true" />
           </folding>
