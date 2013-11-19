@@ -193,7 +193,7 @@ def customer_details(request, model_name):
         if not fname or not lname or not uid or not address or not primary_phone or not license_no or not no_of_days:
             error = True
             error_msg = 'Some details are missing. Please fill all fields marked with *.'
-        elif len(uid) > 13 or not uid.isdigit():
+        elif len(uid) != 12 or not uid.isdigit():
             error = True
             error_msg = 'Invalid UID!'
         elif len(fname) > 20 or len(lname) > 20:
@@ -274,7 +274,7 @@ def customer_details(request, model_name):
         if ac:
             query = "select license_reg_no, color from car where cust_uid is null and ac = 1 and model_no = " + str(model_list[0].model_no)
         else:
-            query = "select license_reg_no, color from car where cust_uid is null and model_no = " + str(model_list[0].model_no)
+            query = "select license_reg_no, color from car where cust_uid is null and ac = 0 and model_no = " + str(model_list[0].model_no)
         cursor.execute(query)
         row = cursor.fetchone()
         if row:

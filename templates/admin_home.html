@@ -30,6 +30,13 @@
         <button id="remove_driver" class="btn btn-info span12">Remove a driver</button>
     </div>
 </div>
+<br>
+<br>
+<div class="row-fluid" style="padding-left: 150px">
+    <div class="span2">
+        <button id="pay_driver" class="btn btn-info span12">Pay driver</button>
+    </div>
+</div>
 
 <script>
     $( "#rent" ).click(function() {
@@ -49,5 +56,8 @@
     });
     $("#remove_driver").click(function(){
         window.location = "http://127.0.0.1:8000/admin/remove_driver";
+    });
+     $("#pay_driver").click(function(){
+        window.location = "http://127.0.0.1:8000/admin/pay_driver";
     });
 </script>

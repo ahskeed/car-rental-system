@@ -1,5 +1,11 @@
 {% include 'roadtrip.tmpl' %}
 
+<div class="row-fluid">
+    <div class="span1" style="float: right">
+        <button id="home" class="btn btn-mini">Home</button>
+    </div>
+</div>
+
 {% if error %}
     <div class="row-fluid" style="padding-left: 30px">
         <div class="span5 alert alert-error" style="padding-left: 20px">
@@ -191,5 +197,8 @@
         {
             $('#place').hide();
         }
+    });
+    $('#home').click(function(){
+        window.location = "http://127.0.0.1:8000/"
     });
 </script>

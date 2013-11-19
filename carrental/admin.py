@@ -23,6 +23,20 @@ def pay_driver(request):
             'error_msg': 'Please enter driver number.'
         })
         return render(request, 'admin_pay_driver.html', context)
+    if not driver_no.isdigit():
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Driver number should contain only digits.',
+            'driver_no': driver_no
+        })
+        return render(request, 'admin_pay_driver.html', context)
+    elif not len(driver_no) > 20:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Driver number should contain max. 20 digits.',
+            'driver_no': driver_no
+        })
+        return render(request, 'admin_pay_driver.html', context)
     cursor = connection.cursor()
     query = 'select salary from driver where driver_no = ' + driver_no
     cursor.execute(query)
@@ -50,6 +64,18 @@ def pay_driver(request):
 
 
 def get_driver_details(request, driver_no):
+    if not driver_no.isdigit():
+        return HttpResponse(json.dumps({
+            'error': True,
+            'error_msg': 'Driver number should contain only digits.',
+            'driver_no': driver_no
+        }))
+    elif not len(driver_no) > 20:
+        return HttpResponse(json.dumps({
+            'error': True,
+            'error_msg': 'Driver number should contain max. 20 digits.',
+            'driver_no': driver_no
+        }))
     cursor = connection.cursor()
     query = 'select * from driver natural join place where driver_no = ' + driver_no
     cursor.execute(query)
@@ -71,7 +97,7 @@ def get_driver_details(request, driver_no):
         'salary': row[6],
         'place': row[8]
     }
-    return  HttpResponse(json.dumps(data))
+    return HttpResponse(json.dumps(data))
 
 
 def rent(request):
@@ -452,7 +478,7 @@ def add_driver(request):
         elif len(driver_no) > 20:
             error = True
             error_msg = 'Driver number cannot contain more than 20 digits.'
-        elif len(uid) > 12:
+        elif len(uid) != 12:
             error = True
             error_msg = 'UID cannot contain more than 12 digits.'
         elif len(name) > 30:
