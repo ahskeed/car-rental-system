@@ -1,0 +1,75 @@
+{% include 'roadtrip.tmpl' %}
+
+{% if error %}
+    <div class="row-fluid" style="padding-left: 30px">
+        <div  class="alert alert-error span5">
+           <p>{{ error_msg }}</p>
+        </div>
+    </div>
+{% endif %}
+
+{% if success %}
+    <div class="row-fluid" style="padding-left: 30px">
+        <div class="span7 alert alert-success" style="padding-left: 20px">
+            <h3>Added driver successfully.</h3>
+        </div>
+    </div>
+{% else %}
+    <form method="POST" action="/admin/add_driver">{% csrf_token %}
+        <div class="row-fluid" style="padding-left: 30px">
+            <div class="span2">
+                <p><b>DRIVER NUMBER:</b></p>
+            </div>
+            <div class="span2">
+                <input id="driver_no" name="driver_no" type="text" value="{{ driver_no }}">
+            </div>
+        </div>
+        <div class="row-fluid" style="padding-left: 30px">
+            <div class="span2">
+                <p><b>UID:</b></p>
+            </div>
+            <div class="span2">
+                <input id="uid" name="uid" type="text" value="{{ uid }}">
+            </div>
+        </div>
+        <div class="row-fluid" style="padding-left: 30px">
+            <div class="span2">
+                <p><b>NAME:</b></p>
+            </div>
+            <div class="span2">
+                <input id="name" name="name" type="text" value="{{ name }}">
+            </div>
+        </div>
+        <div class="row-fluid" style="padding-left: 30px">
+            <div class="span2">
+                <p><b>PHONE NUMBER:</b></p>
+            </div>
+            <div class="span2">
+                <input id="phone_no" name="phone_no" type="text" value="{{ phone_no }}">
+            </div>
+        </div>
+        <div class="row-fluid" style="padding-left: 30px">
+            <div class="span2">
+                <p><b>PLACE:</b></p>
+            </div>
+            <div class="span2">
+                <select id="place" name="place">
+                    {% for p in place_list %}
+                        {% ifequal place p %}
+                            <option value="{{ p }}" selected>{{ p }}</option>
+                        {% else %}
+                            <option value="{{ p }}">{{ p }}</option>
+                        {% endifequal %}
+
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row-fluid" style="padding-left: 200px">
+            <div class="span2">
+                <input class="btn btn-info" type="submit" value="Add driver">
+            </div>
+        </div>
+    </form>
+{% endif %}

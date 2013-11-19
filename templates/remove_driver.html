@@ -1,0 +1,33 @@
+{% include 'roadtrip.tmpl' %}
+
+{% if error %}
+    <div class="row-fluid" style="padding-left: 30px">
+        <div  class="alert alert-error span5">
+           <p>{{ error_msg }}</p>
+        </div>
+    </div>
+{% endif %}
+
+{% if success %}
+    <div class="row-fluid" style="padding-left: 30px">
+        <div class="span7 alert alert-success" style="padding-left: 20px">
+            <h3>Removed driver successfully.</h3>
+        </div>
+    </div>
+{% else %}
+    <form method="POST" action="/admin/remove_driver">{% csrf_token %}
+        <div class="row-fluid" style="padding-left: 70px">
+            <div class="span2">
+                <p><b>DRIVER NUMBER:</b></p>
+            </div>
+            <div class="span2">
+                <input type="text" id="driver_no" name="driver_no" value="{{ driver_no }}">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row-fluid" style="padding-left: 200px">
+            <input type="submit" class="btn-info btn" value="Remove">
+        </div>
+    </form>
+{% endif %}

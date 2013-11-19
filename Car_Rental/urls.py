@@ -23,6 +23,8 @@ urlpatterns = patterns('',
     url(r'^admin/get_driver_details/(?P<driver_no>\w+)$', 'carrental.admin.get_driver_details'),
     url(r'^admin/add_car', 'carrental.admin.add_car'),
     url(r'^admin/remove_car', 'carrental.admin.remove_car'),
+    url(r'^admin/add_driver', 'carrental.admin.add_driver'),
+    url(r'^admin/remove_driver', 'carrental.admin.remove_driver'),
 
 
     # url(r'^Car_Rental/', include('Car_Rental.foo.urls')),

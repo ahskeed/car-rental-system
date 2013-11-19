@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.db import connection, transaction, IntegrityError
 from django.template import RequestContext
-import json
+import json,re
 
 SALARY_PER_DAY = 1500
 
@@ -211,17 +211,17 @@ def return_car(request):
         query = 'update rental_transaction set distance = ' + str(distance) + ' where trans_no = ' + trans_no
         cursor.execute(query)
         driver_charges += driver_per_km * distance
-        query = 'select tot_hours from driver where driver_no = ' + driver_no
+        query = 'select total_days from driver where driver_no = ' + driver_no
         cursor.execute(query)
-        tot_hours = list(cursor.fetchone())[0]
-        if tot_hours:
-            tot_hours = int(tot_hours)
-            tot_hours += days
+        total_days = list(cursor.fetchone())[0]
+        if total_days:
+            total_days = int(total_days)
+            total_days += days
         else:
-            tot_hours = days
-        query = 'update driver set tot_hours = ' + str(tot_hours) + ' where driver_no = ' + driver_no
+            total_days = days
+        query = 'update driver set total_days = ' + str(total_days) + ' where driver_no = ' + driver_no
         cursor.execute(query)
-        query = 'update driver set salary = ' + str(tot_hours*SALARY_PER_DAY) + ' where driver_no = ' + driver_no
+        query = 'update driver set salary = ' + str(total_days*SALARY_PER_DAY) + ' where driver_no = ' + driver_no
         cursor.execute(query)
         query = 'update driver set avail = 1 where driver_no = ' + driver_no
         cursor.execute(query)
@@ -405,3 +405,184 @@ def remove_car(request):
         'license_reg_no': license_reg_no,
     })
     return render(request, 'remove_car.html', context)
+
+
+def add_driver(request):
+    cursor = connection.cursor()
+    query = "select place_name from place"
+    cursor.execute(query)
+    row = cursor.fetchall()
+    row = map(list, row)
+    place_list = []
+    for x in row:
+        for y in x:
+            place_list.append(y)
+    context = RequestContext(request, {
+        'place_list': place_list
+    })
+
+    if not request.POST:
+        return render(request, 'add_driver.html', context)
+    driver_no = request.POST.get('driver_no')
+    uid = request.POST.get('uid')
+    name = request.POST.get('name')
+    phone_no = request.POST.get('phone_no')
+    place = request.POST.get('place')
+    if not driver_no or not uid or not name or not phone_no or not place:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Please enter all details.',
+            'driver_no': driver_no,
+            'uid': uid,
+            'name': name,
+            'phone_no': phone_no,
+            'place': place,
+            'place_list': place_list
+        })
+        return render(request, 'add_driver.html', context)
+    try:
+        error = False
+        error_msg = ''
+        if not driver_no.isdigit():
+            error = True
+            error_msg = 'Driver number should contain only digits.'
+        elif not uid.isdigit():
+            error = True
+            error_msg = 'UID should contain only digits.'
+        elif len(driver_no) > 20:
+            error = True
+            error_msg = 'Driver number cannot contain more than 20 digits.'
+        elif len(uid) > 12:
+            error = True
+            error_msg = 'UID cannot contain more than 12 digits.'
+        elif len(name) > 30:
+            error = True
+            error_msg = 'Name should have max. 30 characters.'
+        elif not re.match("^[a-zA-Z ]*$", name):
+            error = True
+            error_msg = 'Name should have only alphabets and spaces.'
+        elif len(phone_no) != 10 or not phone_no.isdigit():
+            error = True
+            error_msg = 'Invalid phone number.'
+        if error:
+            context = RequestContext(request, {
+                'error': True,
+                'error_msg': error_msg,
+                'driver_no': driver_no,
+                'uid': uid,
+                'name': name,
+                'phone_no': phone_no,
+                'place': place,
+                'place_list': place_list
+            })
+            return render(request, 'add_driver.html', context)
+        query = "select * from driver where driver_no = " + driver_no
+        cursor.execute(query)
+        row = cursor.fetchone()
+        if row:
+            context = RequestContext(request, {
+                'error': True,
+                'error_msg': 'Driver with this driver number already exists.',
+                'driver_no': driver_no,
+                'uid': uid,
+                'name': name,
+                'phone_no': phone_no,
+                'place': place,
+                'place_list': place_list
+            })
+            return render(request, 'add_driver.html', context)
+        query = "select place_no from place where place_name = '" + place + "'"
+        cursor.execute(query)
+        place_no = str(list(cursor.fetchone())[0])
+        print phone_no
+        query = "insert into driver(driver_no,u_id,name,ph_no,place_no) values(" + driver_no + "," + uid + "," \
+                                                                                    "'" + name + "'," + phone_no + "," + place_no + ")"
+
+        print query
+        cursor.execute(query)
+        transaction.commit_unless_managed()
+        context = RequestContext(request, {
+            'success': True
+        })
+        return render(request, 'add_driver.html', context)
+
+    except IntegrityError:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Model number entered does not exist.',
+            'driver_no': driver_no,
+            'uid': uid,
+            'name': name,
+            'phone_no': phone_no,
+            'place': place,
+            'place_list': place_list
+        })
+        return render(request, 'add_driver.html', context)
+    except:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Internal Server Error. Please try later.',
+            'driver_no': driver_no,
+            'uid': uid,
+            'name': name,
+            'phone_no': phone_no,
+            'place': place,
+            'place_list': place_list
+        })
+        return render(request, 'add_driver.html', context)
+
+
+def remove_driver(request):
+    if not request.POST:
+        return render(request, 'remove_driver.html')
+    driver_no = request.POST.get('driver_no')
+    error = False
+    error_msg = ''
+    if not driver_no:
+        error = True
+        error_msg = 'Please enter Driver Number.'
+    elif len(driver_no) > 20:
+        error = True
+        error_msg = 'Driver Number should not be more than 20 digits.'
+    elif not driver_no.isdigit():
+        error = True
+        error_msg = 'Driver Number should contain only digits.'
+    if error:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': error_msg,
+            'driver_no': driver_no
+        })
+        return render(request, 'remove_driver.html', context)
+    cursor = connection.cursor()
+    query = "select avail from driver where driver_no = " + driver_no
+    cursor.execute(query)
+    row = cursor.fetchone()
+    if not row:
+        error = True
+        error_msg = "No such Driver."
+    elif not list(row)[0]:
+        error = True
+        error_msg = "This driver has been hired by a customer. Please try again later."
+    if error:
+        context = RequestContext(request, {
+            'error': error,
+            'error_msg': error_msg,
+            'driver_no': driver_no
+        })
+        return render(request, 'remove_driver.html', context)
+    query = "select driver_no from rental_transaction where driver_no = " + driver_no
+    cursor.execute(query)
+    row = cursor.fetchall()
+    if row:
+        query = "delete from rental_transaction where driver_no = '" + driver_no + "'"
+        cursor.execute(query)
+    query = "delete from driver where driver_no = " + driver_no
+    cursor.execute(query)
+
+    transaction.commit_unless_managed()
+    context = RequestContext(request, {
+        'success': True,
+        'driver_no': driver_no,
+    })
+    return render(request, 'remove_driver.html', context)

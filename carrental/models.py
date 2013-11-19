@@ -53,7 +53,7 @@ class Driver(models.Model):
     driver_no = models.BigIntegerField(primary_key=True)
     u_id = models.BigIntegerField()
     name = models.CharField(max_length=30)
-    ph_no = models.IntegerField()
+    ph_no = models.BigIntegerField()
     place_no = models.ForeignKey('Place', db_column='place_no')
     total_days = models.BigIntegerField(blank=True, null=True)
     salary = models.BigIntegerField(blank=True, null=True)
