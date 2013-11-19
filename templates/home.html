@@ -1,1 +1,22 @@
 {% include 'roadtrip.tmpl' %}
+
+<div class="row-fluid" style="padding-left: 30px">
+    <div class="span2">
+        <button id="rent" class="btn btn-info span12">Rent a car</button>
+    </div>
+    <div class="span2">
+        <button id="cancel" class="btn btn-info">Cancel a transaction</button>
+    </div>
+</div>
+
+<script>
+    $('#rent').click(function(){
+        window.location = 'http://127.0.0.1:8000/rent';
+    });
+    $('#cancel').click(function(){
+        window.location = 'http://127.0.0.1:8000/cancel';
+    });
+</script>
+
+
+

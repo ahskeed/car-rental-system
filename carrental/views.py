@@ -1,10 +1,13 @@
 # Create your views here.
 from _mysql_exceptions import DatabaseError
+import json
 from django.shortcuts import render
 from django.db import connection
 from django.template import RequestContext
+from django.views.decorators.csrf import csrf_protect
 from carrental.models import Model, RentalTransaction, Customer, Car, CarType, Driver
-from django.db import  transaction
+from django.db import transaction
+from django.http import HttpResponse
 
 
 def home(request):
@@ -184,7 +187,7 @@ def customer_details(request, model_name):
         alt_phone = request.POST.get('alt_phone')
         driver = request.POST.get('driver')
         place = request.POST.get('place')
-        no_of_days = int(request.POST.get('no_of_days'))
+        no_of_days = request.POST.get('no_of_days')
         ac = request.POST.get('ac')
         error = False
         error_msg = ""
@@ -230,6 +233,7 @@ def customer_details(request, model_name):
             })
             return render(request, 'customer_details.html', context)
 
+        no_of_days = int(no_of_days)
         driver_no = []
         if driver:
             query = "select driver_no from driver natural join place where avail = 1 and place_name = '" + place + "'"
@@ -266,13 +270,15 @@ def customer_details(request, model_name):
             ac_add = model_list[0].car_type_no.ac_add
 
         if ac:
-            query = "select license_reg_no from car where cust_uid is null and ac = 1 and model_no = " + str(model_list[0].model_no)
+            query = "select license_reg_no, color from car where cust_uid is null and ac = 1 and model_no = " + str(model_list[0].model_no)
         else:
-            query = "select license_reg_no from car where cust_uid is null and model_no = " + str(model_list[0].model_no)
+            query = "select license_reg_no, color from car where cust_uid is null and model_no = " + str(model_list[0].model_no)
         cursor.execute(query)
-        lic_no = cursor.fetchone()
-        if lic_no:
-            lic_no = list(lic_no)[0]
+        row = cursor.fetchone()
+        if row:
+            row = list(row)
+            lic_no = row[0]
+            color = row[1]
         else:
             context = RequestContext(request, {
                 'place_list': place_list,
@@ -351,6 +357,7 @@ def customer_details(request, model_name):
                 'no_of_days': no_of_days,
                 'advance': advance,
                 'car_license': lic_no,
+                'car_color': color,
                 'model_name': name
             })
 
@@ -364,7 +371,74 @@ def customer_details(request, model_name):
             return render(request, 'customer_details.html', context)
 
 
+def get_details(request, trans_no, uid):
+    cursor = connection.cursor()
+    query = 'select * from rental_transaction where status != 0 and trans_no = ' + trans_no + ' and u_id = ' + uid
+    cursor.execute(query)
+    row = cursor.fetchone()
+    if not row:
+        error_msg = "No such booking ID or The UID doesn't match the UID provided at the time of booking."
+        return HttpResponse(json.dumps({
+            'status': 'error',
+            'msg': error_msg,
+            'trans_no': trans_no,
+            'uid': uid
+        }))
+    trans = list(row)
+    query = "select color,name from car,model where car.model_no = model.model_no and license_reg_no = '" + trans[2] + "'"
+    cursor.execute(query)
+    row = cursor.fetchone()
+    row = list(row)
+
+    return HttpResponse(json.dumps({
+        'status': 'success',
+        'msg': '',
+        'trans_no': trans_no,
+        'uid': uid,
+        'car_license': trans[2],
+        'advance': trans[8],
+        'no_of_days': trans[10],
+        'model_name': row[1],
+        'car_color': row[0]
+    }))
 
 
+def cancel_transaction(request):
+    if not request.POST:
+        return render(request, 'cancel_transaction.html')
+    trans_no = request.POST.get('trans_no')
+    uid = request.POST.get('uid')
+    cursor = connection.cursor()
+    query = 'select * from rental_transaction where status != 0 and trans_no = ' + trans_no + ' and u_id = ' + uid
+    cursor.execute(query)
+    row = cursor.fetchone()
+    if not row:
+        error_msg = "No such booking ID or The UID doesn't match the UID provided at the time of booking."
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': error_msg,
+            'trans_no': trans_no,
+            'uid': uid
+        })
+        return render(request, 'cancel_transaction.html', context)
+    trans = list(row)
+    query = 'update rental_transaction set status = 0 where trans_no = ' + trans_no
+    cursor.execute(query)
+    query = "update car set cust_uid = null where license_reg_no = '" + trans[2] + "'"
+    cursor.execute(query)
+    query = "select driver_no from car where license_reg_no = '" + trans[2] + "' and driver_no is not null"
+    cursor.execute(query)
+    row = cursor.fetchone()
+    if row:
+        query = "update car set driver_no = null where license_reg_no = '" + trans[2] + "'"
+        cursor.execute(query)
+        query = "update driver set avail = 1 where driver_no = " + str(list(row)[0])
+        cursor.execute(query)
 
-
+    transaction.commit_unless_managed()
+    context = RequestContext(request, {
+        'success': True,
+        'trans_no': trans_no,
+        'uid': uid
+    })
+    return render(request, 'cancel_transaction.html', context)

@@ -102,6 +102,7 @@ class RentalTransaction(models.Model):
     advance = models.BigIntegerField(blank=True, null=True)
     rental_amt = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
     no_of_days = models.IntegerField()
+    status = models.IntegerField(default=1)
 
     class Meta:
         managed = True

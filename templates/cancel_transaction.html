@@ -1,0 +1,140 @@
+{% include 'roadtrip.tmpl' %}
+
+<div id="error" class="row-fluid" style="padding-left: 30px">
+    <div  class="alert alert-error span5">
+       <p id="error_msg"></p>
+    </div>
+</div>
+
+{% if error %}
+    <div class="row-fluid" style="padding-left: 30px">
+        <div  class="alert alert-error span5">
+           <p>{{ error_msg }}</p>
+        </div>
+    </div>
+{% endif %}
+
+{% if success %}
+    <div class="row-fluid" style="padding-left: 30px">
+        <div class="span7 alert alert-success" style="padding-left: 20px">
+            <h3>Your booking has been cancelled successfully</h3>
+        </div>
+    </div>
+{% else %}
+    <form method="POST" action="/cancel">{% csrf_token %}
+        <div style="padding-left: 75px" class="row-fluid">
+            <div class="span2" style="padding-right: 50px">
+                <p><b>Enter booking ID:</b></p>
+            </div>
+            <input type="text" name="trans_no" id="trans_no">
+        </div>
+        <div style="padding-left: 75px" class="row-fluid">
+            <div class="span2" style="padding-right: 50px">
+                <p><b>Enter UID:</b></p>
+            </div>
+            <input type="text" name="uid" id="uid">
+        </div>
+        <br>
+        <div id="details">
+            <div class="row-fluid" style="padding-left: 30px">
+                <div class="span3" style="padding-left: 20px">
+                    <p><b>Model:</b></p>
+                </div>
+                <div class="span3">
+                    <p id="model_name"></p>
+                </div>
+            </div>
+            <div class="row-fluid" style="padding-left: 30px">
+                <div class="span3" style="padding-left: 20px">
+                    <p><b>Car License no:</b></p>
+                </div>
+                <div class="span3">
+                    <p id="car_license"></p>
+                </div>
+            </div>
+            <div class="row-fluid" style="padding-left: 30px">
+                <div class="span3" style="padding-left: 20px">
+                    <p><b>Car Color:</b></p>
+                </div>
+                <div class="span3">
+                    <p id="car_color"></p>
+                </div>
+            </div>
+            <div class="row-fluid" style="padding-left: 30px">
+                <div class="span3" style="padding-left: 20px">
+                    <p><b>No. of days:</b></p>
+                </div>
+                <div class="span3">
+                    <p id="no_of_days"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row-fluid" style="padding-left: 30px">
+                <div class="span3" style="padding-left: 20px">
+                    <h3>Total Amount:</h3>
+                </div>
+                <div class="span3">
+                    <h4 id="advance"></h4>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row-fluid" style="padding-left: 100px">
+            <button type="button" id="get_details" class="btn-info btn span2">Get details</button>
+            <button type="button" id="hide_details" class="btn btn-info span2">Hide details</button>
+            <div class="span2">
+                <input type="submit" id="cancel" class="btn btn-info span12" value="Cancel">
+            </div>
+        </div>
+    </form>
+{% endif %}
+
+<script>
+    $(function(){
+        $('#details').hide();
+        $('#hide_details').hide();
+        $('#error').hide();
+    });
+    $('#get_details').click(function(){
+        var trans_no = $('#trans_no').val();
+        var uid = $('#uid').val();
+        if(!trans_no)
+        {
+            $('#error_msg').empty().append('Please enter Booking ID.');
+            $('#error').show();
+        }
+        else if(!uid)
+        {
+            $('#error_msg').empty().append('Please enter UID.');
+            $('#error').show();
+        }
+        else
+        {
+            var url = '/get_details/' +  trans_no + '/' + uid;
+            $.get(url, function(data){
+                if(data.status=='error')
+                {
+                    $('#error_msg').empty().append(data.msg);
+                    $('#error').show();
+                }
+                else
+                {
+                    $('#error').hide();
+                    $('#model_name').empty().append(data.model_name);
+                    $('#car_license').empty().append(data.car_license);
+                    $('#car_color').empty().append(data.car_color);
+                    $('#no_of_days').empty().append(data.no_of_days);
+                    $('#advance').empty().append(data.advance);
+                    $('#details').show();
+                    $('#hide_details').show();
+                    $('#get_details').hide();
+                }
+            },'json');
+        }
+    });
+    $('#hide_details').click(function(){
+        $('#details').hide();
+        $('#get_details').show();
+        $(this).hide();
+    });
+</script>
