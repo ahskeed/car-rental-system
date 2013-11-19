@@ -16,8 +16,11 @@ urlpatterns = patterns('',
     url(r'^get_details/(?P<trans_no>\w+)/(?P<uid>\w+)$', 'carrental.views.get_details'),
 
     url(r'^admin$', 'carrental.admin.home'),
-    url(r'^admin/transaction_details$', 'carrental.admin.trans_details'),
+    url(r'^admin/rent$', 'carrental.admin.rent'),
+    url(r'^admin/return$', 'carrental.admin.return_car'),
     url(r'^admin/get_trans_details/(?P<trans_no>\w+)$', 'carrental.admin.get_trans_details'),
+    url(r'^admin/pay_driver', 'carrental.admin.pay_driver'),
+    url(r'^admin/get_driver_details/(?P<driver_no>\w+)$', 'carrental.admin.get_driver_details'),
 
     # url(r'^Car_Rental/', include('Car_Rental.foo.urls')),
 

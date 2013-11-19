@@ -2,41 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3109ab0d-ea94-498f-abc3-c479485c3790" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/cancel_transaction.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin_pay_driver.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin_return.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carrental/admin.py" afterPath="$PROJECT_DIR$/carrental/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/customer_details.html" afterPath="$PROJECT_DIR$/templates/customer_details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin_home.html" afterPath="$PROJECT_DIR$/templates/admin_home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin_rent.html" afterPath="$PROJECT_DIR$/templates/admin_rent.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carrental/models.py" afterPath="$PROJECT_DIR$/carrental/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Car_Rental/urls.py" afterPath="$PROJECT_DIR$/Car_Rental/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/view_budget.html" afterPath="$PROJECT_DIR$/templates/view_budget.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carrental/views.py" afterPath="$PROJECT_DIR$/carrental/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Car_Rental.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/settings.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384766632113" ignored="false" />
-    <file path="/models.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384792696252" ignored="false" />
+    <file path="/models.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384862046794" ignored="false" />
     <file path="/*.regexp" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384408670461" ignored="false" />
     <file path="/home.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384242200085" ignored="false" />
     <file path="/home.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384777893058" ignored="false" />
-    <file path="/urls.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384788190709" ignored="false" />
-    <file path="/views.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384795256305" ignored="false" />
+    <file path="/urls.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384854644312" ignored="false" />
+    <file path="/views.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384852156368" ignored="false" />
     <file path="/Dummy.txt" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384807838459" ignored="false" />
     <file path="/view_car_types.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544346970" ignored="false" />
     <file path="/view_top_premium.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544700766" ignored="false" />
     <file path="/merc_eclass_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384257760757" ignored="false" />
     <file path="/view_luxury.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384532128089" ignored="false" />
     <file path="/view_medium.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384532596459" ignored="false" />
-    <file path="/view_budget.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384544924541" ignored="false" />
+    <file path="/view_budget.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384851892621" ignored="false" />
     <file path="/view_suv.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384545155876" ignored="false" />
-    <file path="/admin_home.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384366426393" ignored="false" />
+    <file path="/admin_home.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384839875135" ignored="false" />
     <file path="/roadtrip.tmpl" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384413969410" ignored="false" />
-    <file path="/admin.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384766656754" ignored="false" />
-    <file path="/admin_rent.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384554353437" ignored="false" />
+    <file path="/admin.py" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384867798828" ignored="false" />
+    <file path="/admin_rent.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384840328853" ignored="false" />
     <file path="/jquery-ui.js" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384413714095" ignored="false" />
     <file path="/model_name_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384612257762" ignored="false" />
     <file path="/customer_details.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384781082747" ignored="false" />
     <file path="/cancel_transaction.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384795075396" ignored="false" />
+    <file path="/admin_return.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384852718494" ignored="false" />
+    <file path="/admin_pay_driver.html" changelist="3109ab0d-ea94-498f-abc3-c479485c3790" time="1384867695364" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carrental/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="43" selection-start="3895" selection-end="3895" vertical-scroll-proportion="0.0">
+            <state line="57" column="14" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,7 +71,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carrental/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="411" column="67" selection-start="15061" selection-end="15061" vertical-scroll-proportion="0.0">
+            <state line="426" column="25" selection-start="15727" selection-end="15727" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#26#69#0" expanded="true" />
               </folding>
@@ -76,46 +79,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cancel_transaction.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/cancel_transaction.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="12" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.33834586">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="55" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customer_details.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="14" selection-start="328" selection-end="455" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Car_Rental/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+            <state line="21" column="27" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/carrental/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="81" selection-end="117" vertical-scroll-proportion="0.0">
+            <state line="25" column="32" selection-start="740" selection-end="740" vertical-scroll-proportion="0.14622642">
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_pay_driver.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin_pay_driver.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="49" selection-start="4412" selection-end="4412" vertical-scroll-proportion="-7.2916665">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#h3#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_return.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin_return.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="18" selection-start="2490" selection-end="2490" vertical-scroll-proportion="-12.0">
+              <folding>
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_rent.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin_rent.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="29" selection-start="29" selection-end="176" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -139,22 +159,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/view_car_types.html" />
-        <option value="$PROJECT_DIR$/templates/view_budget.html" />
-        <option value="$PROJECT_DIR$/templates/view_luxury.html" />
-        <option value="$PROJECT_DIR$/templates/view_medium.html" />
         <option value="$PROJECT_DIR$/templates/view_suv.html" />
         <option value="$PROJECT_DIR$/templates/view_top_premium.html" />
-        <option value="$PROJECT_DIR$/templates/admin_rent.html" />
         <option value="$PROJECT_DIR$/templates/model_name_details.html" />
         <option value="$PROJECT_DIR$/Car_Rental/settings.py" />
-        <option value="$PROJECT_DIR$/carrental/admin.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/customer_details.html" />
-        <option value="$PROJECT_DIR$/Car_Rental/urls.py" />
-        <option value="$PROJECT_DIR$/carrental/models.py" />
         <option value="$PROJECT_DIR$/templates/cancel_transaction.html" />
+        <option value="$PROJECT_DIR$/templates/admin_rent.html" />
+        <option value="$PROJECT_DIR$/templates/admin_home.html" />
+        <option value="$PROJECT_DIR$/templates/view_budget.html" />
+        <option value="$PROJECT_DIR$/templates/admin_return.html" />
+        <option value="$PROJECT_DIR$/Car_Rental/urls.py" />
         <option value="$PROJECT_DIR$/carrental/views.py" />
+        <option value="$PROJECT_DIR$/carrental/models.py" />
+        <option value="$PROJECT_DIR$/templates/admin_pay_driver.html" />
+        <option value="$PROJECT_DIR$/carrental/admin.py" />
       </list>
     </option>
   </component>
@@ -233,6 +253,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="carrental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carrental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Car_Rental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carrental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -466,11 +526,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19665605" sideWeight="0.398374" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16162421" sideWeight="0.7414634" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.014634146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.60162604" sideWeight="0.99840766" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25853658" sideWeight="0.99840766" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -542,35 +602,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/merchant/order/customer_in_order.mako">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Car_Rental/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="55" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/error.mako">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/model_name_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="33" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.5770677" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Bilent/bilentapp/src/templates/common/kyash_code_order.mako">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -591,32 +622,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5701439" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carrental/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="81" selection-end="117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_rent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.197561" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Car_Rental/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carrental/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="43" selection-start="3895" selection-end="3895" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/customer_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="14" selection-start="328" selection-end="455" vertical-scroll-proportion="0.0">
@@ -624,19 +629,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="61" selection-start="526" selection-end="526" vertical-scroll-proportion="0.60913706">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/view_budget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="676" selection-end="676" vertical-scroll-proportion="0.45454547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cancel_transaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="185" selection-end="373" vertical-scroll-proportion="0.18233083">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="31" selection-end="311" vertical-scroll-proportion="0.24150269">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/carrental/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="411" column="67" selection-start="15061" selection-end="15061" vertical-scroll-proportion="0.0">
+        <state line="426" column="25" selection-start="15727" selection-end="15727" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#26#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cancel_transaction.html">
+    <entry file="file://$PROJECT_DIR$/Car_Rental/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="12" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.33834586">
+        <state line="21" column="27" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_rent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="29" selection-end="176" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrental/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="14" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_return.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="18" selection-start="2490" selection-end="2490" vertical-scroll-proportion="-12.0">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_pay_driver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="49" selection-start="4412" selection-end="4412" vertical-scroll-proportion="-7.2916665">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h3#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrental/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="740" selection-end="740" vertical-scroll-proportion="0.14622642">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

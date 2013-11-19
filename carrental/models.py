@@ -55,7 +55,7 @@ class Driver(models.Model):
     name = models.CharField(max_length=30)
     ph_no = models.IntegerField()
     place_no = models.ForeignKey('Place', db_column='place_no')
-    tot_hours = models.BigIntegerField(blank=True, null=True)
+    total_days = models.BigIntegerField(blank=True, null=True)
     salary = models.BigIntegerField(blank=True, null=True)
     avail = models.IntegerField(default=1)
 

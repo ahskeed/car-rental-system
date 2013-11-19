@@ -1,10 +1,19 @@
 {% include 'roadtrip.tmpl' %}
 
-<button type="button" id="rent">Rent a car</button>
-<button type="button" id="return">Return car</button>
+<div class="row-fluid" style="padding-left: 30px">
+    <div class="span2">
+        <button id="rent" class="btn btn-info span12">Rent a car</button>
+    </div>
+    <div class="span2">
+        <button id="return" class="btn btn-info span12">Return a car</button>
+    </div>
+</div>
 
 <script>
     $( "#rent" ).click(function() {
-        window.location = "http://127.0.0.1:8000/admin/transaction_details";
+        window.location = "http://127.0.0.1:8000/admin/rent";
+    });
+    $( "#return" ).click(function() {
+        window.location = "http://127.0.0.1:8000/admin/return";
     });
 </script>

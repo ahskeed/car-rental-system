@@ -17,7 +17,65 @@
 {% if success %}
     <div class="row-fluid" style="padding-left: 30px">
         <div class="span7 alert alert-success" style="padding-left: 20px">
-            <h3>Time of rent has been updated successfully.</h3>
+            <h3>Time of return has been updated successfully.</h3>
+        </div>
+    </div>
+    <div style="padding-left: 50px">
+        {% if driver_charges %}
+            <div class="row-fluid">
+                <div class="span3">
+                   <p><b>DRIVER CHARGES<small> (at Rs. {{ driver_per_km }} per km) </small>:</b></p>
+                </div>
+                <div class="span3">
+                    <p>{{ driver_charges }}</p>
+                </div>
+            </div>
+        {% endif %}
+        {% if extra_amount %}
+            <div class="row-fluid">
+                <div class="span3">
+                    <p><b>EXTRA AMOUNT<small> (due to additional {{ days_extra }} {{ day }}) </small>:</b></p>
+                </div>
+                <div class="span3">
+                    <p>{{ extra_amount }}</p>
+                </div>
+            </div>
+        {% endif %}
+        <div class="row-fluid">
+            <div class="span3">
+                <p><b>DEPOSIT:</b></p>
+            </div>
+            <div class="span3">
+                <p>{{ deposit }}</p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <p><b>TOTAL AMOUNT:</b></p>
+            </div>
+            <div class="span3">
+                <p>{{ total_amount }}</p>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <p><b>ADVANCE PAID:</b></p>
+            </div>
+            <div class="span3">
+                <p>{{ advance }}</p>
+            </div>
+        </div>
+        <div id="driver" class="row-fluid">
+            <div class="span3">
+                {% if ret %}
+                    <p><b>AMOUNT TO BE RETURNED:</b></p>
+                {% else %}
+                    <p><b>ADDITIONAL AMOUNT TO BE PAID:</b></p>
+                {% endif %}
+            </div>
+            <div class="span3">
+                <p>Rs. {{ return_amt }}</p>
+            </div>
         </div>
     </div>
 {% else %}
@@ -86,14 +144,24 @@
         <div class="span7" id="advance"></div>
     </div>
     <br>
-    <form method="POST" action="/admin/rent">{% csrf_token %}
+    <form method="POST" action="/admin/return">{% csrf_token %}
         <input type="text" hidden="hidden" name="trans_no" id="trans_no">
+        <input type="text" hidden="hidden" name="no_of_days" id="days">
+        <div id="distance" class="row-fluid">
+            <div class="span2">
+                <p><b>DISTANCE:</b></p>
+            </div>
+            <div class="span7">
+                <input type="text" name="dist" id="dist">
+            </div>
+        </div>
+        <br>
         <div class="row-fluid">
             <div class="span3" style="padding-left: 150px">
                 <button class="btn-info btn" type="button" id="hide_details">Hide details</button>
             </div>
-            <div class="span1">
-                <input class="btn btn-info span12" type="submit" value="Paid">
+            <div class="span2">
+                <input class="btn btn-info span8" type="submit" value="Returned">
             </div>
         </div>
     </form>
@@ -130,17 +198,20 @@
                 if(data.driver_no)
                 {
                     $('#driver').show();
+                    $('#distance').show();
                     $('#driver_no').empty().append(data.driver_no);
                 }
                 else
                 {
                     $('#driver').hide();
+                    $('#distance').hide();
                 }
                 $('#time_of_rent').empty().append(data.time_of_rent);
                 $('#advance').empty().append(data.advance);
                 $('#no_of_days').empty().append(data.no_of_days);
                 $('#trans_details').show();
                 $('#trans_no').val(trans_no).hide();
+                $('#days').val(data.no_of_days).hide();
                 $('#get_details').hide();
             }
         },'json');

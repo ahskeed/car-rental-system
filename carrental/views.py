@@ -4,7 +4,6 @@ import json
 from django.shortcuts import render
 from django.db import connection
 from django.template import RequestContext
-from django.views.decorators.csrf import csrf_protect
 from carrental.models import Model, RentalTransaction, Customer, Car, CarType, Driver
 from django.db import transaction
 from django.http import HttpResponse
@@ -212,7 +211,7 @@ def customer_details(request, model_name):
         elif alt_phone and len(alt_phone) != 10:
             error = True
             error_msg = 'Invalid alternate phone number.'
-        elif no_of_days > 6 or no_of_days < 1:
+        elif int(no_of_days) > 6 or int(no_of_days) < 1:
             error = True
             error_msg = 'The number of days should be between 1 and 6'
         if error:
@@ -409,7 +408,7 @@ def cancel_transaction(request):
     trans_no = request.POST.get('trans_no')
     uid = request.POST.get('uid')
     cursor = connection.cursor()
-    query = 'select * from rental_transaction where status != 0 and trans_no = ' + trans_no + ' and u_id = ' + uid
+    query = 'select * from rental_transaction where status = 1 and trans_no = ' + trans_no + ' and u_id = ' + uid
     cursor.execute(query)
     row = cursor.fetchone()
     if not row:
@@ -426,13 +425,10 @@ def cancel_transaction(request):
     cursor.execute(query)
     query = "update car set cust_uid = null where license_reg_no = '" + trans[2] + "'"
     cursor.execute(query)
-    query = "select driver_no from car where license_reg_no = '" + trans[2] + "' and driver_no is not null"
-    cursor.execute(query)
-    row = cursor.fetchone()
-    if row:
+    if trans[4]:
         query = "update car set driver_no = null where license_reg_no = '" + trans[2] + "'"
         cursor.execute(query)
-        query = "update driver set avail = 1 where driver_no = " + str(list(row)[0])
+        query = "update driver set avail = 1 where driver_no = " + str(trans[4])
         cursor.execute(query)
 
     transaction.commit_unless_managed()
