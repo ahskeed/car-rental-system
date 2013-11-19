@@ -21,6 +21,9 @@ urlpatterns = patterns('',
     url(r'^admin/get_trans_details/(?P<trans_no>\w+)$', 'carrental.admin.get_trans_details'),
     url(r'^admin/pay_driver', 'carrental.admin.pay_driver'),
     url(r'^admin/get_driver_details/(?P<driver_no>\w+)$', 'carrental.admin.get_driver_details'),
+    url(r'^admin/add_car', 'carrental.admin.add_car'),
+    url(r'^admin/remove_car', 'carrental.admin.remove_car'),
+
 
     # url(r'^Car_Rental/', include('Car_Rental.foo.urls')),
 

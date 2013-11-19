@@ -1,6 +1,6 @@
 # Create your views here.
 from _mysql_exceptions import DatabaseError
-import json
+import json, re
 from django.shortcuts import render
 from django.db import connection
 from django.template import RequestContext
@@ -193,25 +193,28 @@ def customer_details(request, model_name):
         if not fname or not lname or not uid or not address or not primary_phone or not license_no or not no_of_days:
             error = True
             error_msg = 'Some details are missing. Please fill all fields marked with *.'
-        elif len(uid) > 13:
+        elif len(uid) > 13 or not uid.isdigit():
             error = True
             error_msg = 'Invalid UID!'
         elif len(fname) > 20 or len(lname) > 20:
             error = True
             error_msg = 'First name and Last name should have max. 20 characters each.'
+        elif not re.match("^[a-zA-Z]*$", fname) or not re.match("^[a-zA-Z]*$", lname):
+            error = True
+            error_msg = 'First name and Last name should have only alphabets.'
         elif len(address) > 100:
             error = True
             error_msg = 'Address should not be more than 100 characters.'
         elif len(license_no) > 10:
             error = True
             error_msg = 'License number should not be more than 10 characters.'
-        elif len(primary_phone) != 10:
+        elif len(primary_phone) != 10 or not primary_phone.isdigit():
             error = True
             error_msg = 'Invalid primary phone number.'
-        elif alt_phone and len(alt_phone) != 10:
+        elif alt_phone and (len(alt_phone) != 10 or not alt_phone.isdigit()):
             error = True
             error_msg = 'Invalid alternate phone number.'
-        elif int(no_of_days) > 6 or int(no_of_days) < 1:
+        elif not no_of_days.isdigit() or int(no_of_days) > 6 or int(no_of_days) < 1:
             error = True
             error_msg = 'The number of days should be between 1 and 6'
         if error:
@@ -319,17 +322,6 @@ def customer_details(request, model_name):
 
             advance = (price + ac_add) * no_of_days + deposit
 
-            #
-            # if driver_no:
-            #     query = "insert into rental_transaction (u_id,license_reg_no,car_type_no,driver_no,no_of_days,advance)" \
-            #         " values (" + uid + ",'" + lic_no + "'," + car_type_no + "," + str(driver_no[0]) + "," + no_of_days + "," + advance + ")"
-            # else:
-            #     query = "insert into rental_transaction (u_id,license_reg_no,car_type_no,no_of_days,advance)" \
-            #         " values (" + uid + ",'" + lic_no + "'," + car_type_no + "," + no_of_days + "," + advance + ")"
-            #
-            #
-            # cursor.execute(query)
-
             query = 'select * from customer where u_id = ' + uid
             uid_obj = list(Customer.objects.raw(query))[0]
 
@@ -371,8 +363,24 @@ def customer_details(request, model_name):
 
 
 def get_details(request, trans_no, uid):
+    if not uid.isdigit():
+        error_msg = "UID should contain only digits."
+        return HttpResponse(json.dumps({
+            'status': 'error',
+            'msg': error_msg,
+            'trans_no': trans_no,
+            'uid': uid
+        }))
+    elif not trans_no.isdigit():
+        error_msg = "Booking ID should contain only digits."
+        return HttpResponse(json.dumps({
+            'status': 'error',
+            'msg': error_msg,
+            'trans_no': trans_no,
+            'uid': uid
+        }))
     cursor = connection.cursor()
-    query = 'select * from rental_transaction where status != 0 and trans_no = ' + trans_no + ' and u_id = ' + uid
+    query = 'select * from rental_transaction where status = 1 and trans_no = ' + trans_no + ' and u_id = ' + uid
     cursor.execute(query)
     row = cursor.fetchone()
     if not row:

@@ -8,6 +8,17 @@
         <button id="return" class="btn btn-info span12">Return a car</button>
     </div>
 </div>
+<br>
+<br>
+
+<div class="row-fluid" style="padding-left: 30px">
+    <div class="span2">
+        <button id="add_car" class="btn btn-info span12">Add a car</button>
+    </div>
+    <div class="span2">
+        <button id="remove_car" class="btn btn-info span12">Remove a car</button>
+    </div>
+</div>
 
 <script>
     $( "#rent" ).click(function() {
@@ -15,5 +26,11 @@
     });
     $( "#return" ).click(function() {
         window.location = "http://127.0.0.1:8000/admin/return";
+    });
+    $("#add_car").click(function(){
+        window.location = "http://127.0.0.1:8000/admin/add_car";
+    });
+    $("#remove_car").click(function(){
+        window.location = "http://127.0.0.1:8000/admin/remove_car";
     });
 </script>

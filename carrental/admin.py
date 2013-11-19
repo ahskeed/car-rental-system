@@ -1,7 +1,7 @@
 from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.db import connection, transaction
+from django.db import connection, transaction, IntegrityError
 from django.template import RequestContext
 import json
 
@@ -102,6 +102,12 @@ def rent(request):
 
 
 def get_trans_details(request, trans_no):
+    if not trans_no.isdigit():
+        return HttpResponse(json.dumps({
+            'error': True,
+            'error_msg': 'Booking ID should contain only digits.',
+            'trans_no': trans_no
+        }))
     cursor = connection.cursor()
     query = 'select customer.u_id,fname,lname,address,license_reg_no,car_type_no,driver_no,advance,no_of_days' \
             ' from rental_transaction,customer where rental_transaction.u_id = customer.u_id and status = 1 and ' \
@@ -154,11 +160,12 @@ def return_car(request):
     time_rent = row[0]
     car_type_no = str(row[2])
     license_reg_no = row[3]
-    driver_no = str(row[4])
+    driver_no = row[4]
     advance = row[5]
     distance = 0
 
     if driver_no:
+        driver_no = str(driver_no)
         distance = request.POST.get('dist')
         if not distance:
             context = RequestContext(request, {
@@ -231,7 +238,18 @@ def return_car(request):
     query = "update car set cust_uid = null where license_reg_no = '" + license_reg_no + "'"
     cursor.execute(query)
 
+    query = "select * from rental_transaction where trans_no = " + trans_no
+    cursor.execute(query)
+    row = cursor.fetchone()
+    row = list(row)
+
+    trans_log = str(row[0])+"|"+str(row[1])+"|"+str(row[2])+"|"+str(row[3])+"|"+str(row[4])+"|"+str(row[5])+"|"+str(row[6])+"|"+str(row[7])+"|"+str(row[8])+"|"+str(row[9])+"|"+str(row[10])+"|"+str(row[11])+"\n"
+    f = open('transactions.txt', 'a')
+    f.write(trans_log)
+    f.close()
+
     transaction.commit_unless_managed()
+
     day = 'days' if days_extra > 1 else 'day'
     ret = True if return_amt > 0 else False
     return_amt = abs(return_amt)
@@ -250,3 +268,140 @@ def return_car(request):
         'driver_per_km': driver_per_km
     })
     return render(request, 'admin_return.html', context)
+
+
+def add_car(request):
+    if not request.POST:
+        return render(request, 'add_car.html')
+    license_reg_no = request.POST.get('license_reg_no')
+    model_no = request.POST.get('model_no')
+    color = request.POST.get('color')
+    ac = request.POST.get('ac')
+    if not license_reg_no or not model_no or not color or not ac:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Please enter all details.',
+            'license_reg_no': license_reg_no,
+            'model_no': model_no,
+            'color': color,
+            'ac': ac
+        })
+        return render(request, 'add_car.html', context)
+    try:
+        error = False
+        if len(license_reg_no) > 10:
+            error = True
+            error_msg = 'License number cannot be more than 10 characters.'
+        elif not model_no.isdigit():
+            error = True
+            error_msg = 'Model number should be a number.'
+        elif len(color) > 10:
+            error = True
+            error_msg = 'Color cannot be more than 10 characters.'
+        if error:
+            context = RequestContext(request, {
+                'error': True,
+                'error_msg': error_msg,
+                'license_reg_no': license_reg_no,
+                'model_no': model_no,
+                'color': color,
+                'ac': ac
+            })
+            return render(request, 'add_car.html', context)
+        cursor = connection.cursor()
+        query = "select * from car where license_reg_no = '" + license_reg_no + "'"
+        cursor.execute(query)
+        row = cursor.fetchone()
+        if row:
+            context = RequestContext(request, {
+                'error': True,
+                'error_msg': 'Car with this license number already exists.',
+                'license_reg_no': license_reg_no,
+                'model_no': model_no,
+                'color': color,
+                'ac': ac
+            })
+            return render(request, 'add_car.html', context)
+        query = "insert into car(license_reg_no,model_no,color,ac) values('" + license_reg_no + "'," + model_no + "," \
+                                                                                    "'" + color + "'," + ac + ")"
+
+        cursor.execute(query)
+        transaction.commit_unless_managed()
+        context = RequestContext(request, {
+            'success': True
+        })
+        return render(request, 'add_car.html', context)
+
+    except IntegrityError:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Model number entered does not exist.',
+            'license_reg_no': license_reg_no,
+            'model_no': model_no,
+            'color': color,
+            'ac': ac
+        })
+        return render(request, 'add_car.html', context)
+    except:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': 'Internal Server Error. Please try later.',
+            'license_reg_no': license_reg_no,
+            'model_no': model_no,
+            'color': color,
+            'ac': ac
+        })
+        return render(request, 'add_car.html', context)
+
+
+def remove_car(request):
+    if not request.POST:
+        return render(request, 'remove_car.html')
+    license_reg_no = request.POST.get('license_reg_no')
+    error = False
+    error_msg = ''
+    if not license_reg_no:
+        error = True
+        error_msg = 'Please enter License Registration Number.'
+    elif len(license_reg_no) > 10:
+        error = True
+        error_msg = 'License Registration Number should not be more than 10 characters.'
+    if error:
+        context = RequestContext(request, {
+            'error': True,
+            'error_msg': error_msg,
+            'license_reg_no': license_reg_no
+        })
+        return render(request, 'remove_car.html', context)
+    cursor = connection.cursor()
+    query = "select cust_uid from car where license_reg_no = '" + license_reg_no + "'"
+    cursor.execute(query)
+    row = cursor.fetchone()
+    if not row:
+        error = True
+        error_msg = "No such License Registration Number."
+    elif list(row)[0]:
+        error = True
+        error_msg = "This car has been rented by a customer. Please try after it has been returned."
+    if error:
+        context = RequestContext(request, {
+            'error': error,
+            'error_msg': error_msg,
+            'license_reg_no': license_reg_no
+        })
+        return render(request, 'remove_car.html', context)
+    query = "select license_reg_no from rental_transaction where license_reg_no = '" + license_reg_no + "'"
+    cursor.execute(query)
+    row = cursor.fetchall()
+    if row:
+        query = "delete from rental_transaction where license_reg_no = '" + license_reg_no + "'"
+        cursor.execute(query)
+    query = "delete from car where license_reg_no = '" + license_reg_no + "'"
+    cursor.execute(query)
+
+    transaction.commit_unless_managed()
+    context = RequestContext(request, {
+        'success': True,
+        'license_reg_no': license_reg_no,
+    })
+    return render(request, 'remove_car.html', context)
